@@ -1,3 +1,19 @@
+import tkinter as tk
+def display_text():
+    label.config(text="Hello, AWS App Runner!")
+
+root = tk.Tk()
+root.title("Simple Python GUI App")
+
+label = tk.Label(root, text="Press the button...")
+label.pack()
+
+button = tk.Button(root, text="Click Me!", command=display_text)
+button.pack()
+
+root.mainloop()
+
+"""
 from wsgiref.simple_server import make_server
 from pyramid.config import Configurator
 from pyramid.response import Response
@@ -17,4 +33,4 @@ if __name__ == '__main__':
         config.add_view(hello_world, route_name='hello')
         app = config.make_wsgi_app()
     server = make_server('0.0.0.0', port, app)
-    server.serve_forever()
+    ser"""ver.serve_forever()
