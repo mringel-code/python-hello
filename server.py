@@ -15,18 +15,18 @@ def result():
     var_2 = request.form.get("var_2", type=int)
     operation = request.form.get("operation")
     if var_1 is None or var_2 is None:
-        result = 'Lỗi'
+        result = 'Fehler'
     else:
-        if(operation == 'Cộng'):
+        if(operation == 'Addition'):
             result = var_1 + var_2
-        elif(operation == 'Trừ'):
+        elif(operation == 'Subtraktion'):
             result = var_1 - var_2
-        elif(operation == 'Nhân'):
+        elif(operation == 'Multiplikation'):
             result = var_1 * var_2
-        elif(operation == 'Chia'):
+        elif(operation == 'Division'):
             result = var_1 / var_2
         else:
-            result = 'Dữ liệu chưa được nhập'
+            result = 'Es wurden keine Daten eingegeben'
     entry = result
     return render_template('result.html', entry=entry)
 

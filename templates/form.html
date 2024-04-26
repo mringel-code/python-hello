@@ -8,7 +8,7 @@
 	<body align=center>
 		<div class="row">
 			<div class="col-md-4"></div>
-			<div class="col-md-4"><legend><h1>Máy tính</h1></legend></div>
+			<div class="col-md-4"><legend><h1>Berechnen</h1></legend></div>
 			<div class="col-md-4"></div>
 		</div>
 			<br>
@@ -17,25 +17,25 @@
 			<div class="col-md-4">
 				<form class="form-horizontal" action={{ url_for('result') }}  method="post">
 					<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">Giá trị 1:</label>
+						<label class="control-label col-xs-3" for="var_1">Wert 1:</label>
 						<div class="col-xs-7">
 							<input type="number" class="form-control" name="var_1" placeholder="&nbsp;0&nbsp;">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-xs-3" for="var_1">Giá trị 2:</label>
+						<label class="control-label col-xs-3" for="var_1">Wert 2:</label>
 						<div class="col-xs-7">
 							<input type="number" class="form-control" name="var_2" placeholder="&nbsp;0&nbsp;">
 						</div>
 					</div>
 					<div class="form-group">
-            			<label class="control-label col-xs-3">Chọn trị tính:</label>
+            			<label class="control-label col-xs-3">Wählen Sie eine Funktion:</label>
             			<div class="col-xs-5">
                 			<select class="form-control" name="operation">
-                    			<option>Cộng</option>
-                    			<option>Trừ</option>
-                    			<option>Nhân</option>
-                    			<option>Chia</option>
+                    			<option>Addition</option>
+                    			<option>Subtraktion</option>
+                    			<option>Multiplikation</option>
+                    			<option>Division</option>
                 			</select>
             			</div>
             		</div>
