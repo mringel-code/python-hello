@@ -1,14 +1,13 @@
-import tkinter as tk
-def display_text():
-    label.config(text="Hello, AWS App Runner!")
+from flask import Flask, render_template, request
 
-root = tk.Tk()
-root.title("Simple Python GUI App")
+app = Flask(__name__)
 
-label = tk.Label(root, text="Press the button...")
-label.pack()
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    message = ''
+    if request.method == 'POST':
+        message = 'Button clicked!'
+    return render_template('index.html', message=message)
 
-button = tk.Button(root, text="Click Me!", command=display_text)
-button.pack()
-
-root.mainloop()ver.serve_forever()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
